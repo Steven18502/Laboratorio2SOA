@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir('./terraform'){
                     sh 'terraform init'
-                    sh 'gcloud auth login'
+                    sh '$Env:GOOGLE_APPLICATION_CREDENTIALS="lab.json"'
                     sh 'terraform plan'
                     sh 'terraform apply'
                     sh 'terraform destroy'
