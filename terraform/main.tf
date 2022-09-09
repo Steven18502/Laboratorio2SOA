@@ -2,8 +2,6 @@
 provider "google" {
   project = var.project_id
   region  = var.region
+  credentials = "${file("lab.json")}"
 }
-resource "google" {
-  username = "steven18502@gmail.com"
-  password = "culiface00"
-}
+
