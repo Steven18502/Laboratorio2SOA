@@ -6,10 +6,8 @@ pipeline {
             steps {
                 dir('./terraform'){
                     sh 'terraform init'
-                    sh '$Env:GOOGLE_APPLICATION_CREDENTIALS="/home/ubuntu/Downloads/lab.json"'
-                    sh 'terraform plan'
-                    sh 'terraform apply'
-                    sh 'terraform destroy'
+                    sh 'ls'
+
                 }
             }
         }
