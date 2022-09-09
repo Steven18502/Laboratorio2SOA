@@ -1,10 +1,15 @@
 
+
 pipeline {
     agent any
     stages {
         stage("init") {
             steps {
-              echo "init"
+                dir('./terraform'){
+                    sh 'terraform init'
+                    sh 'ls'
+
+                }
             }
         }
         stage("build") {
