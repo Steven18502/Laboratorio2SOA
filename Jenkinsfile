@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage("init") {
             steps {
-              echo "init"
+                dir('./terraform'){
+                    sh 'terraform init'
+                }
             }
         }
         stage("build") {
