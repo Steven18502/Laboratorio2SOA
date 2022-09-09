@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage("init") {
             steps {
-                echo 'ls'
+                ls 'terraform init'
+                
             }
         }
         stage("build") {
