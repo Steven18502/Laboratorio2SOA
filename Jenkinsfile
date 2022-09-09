@@ -6,6 +6,7 @@ pipeline {
             steps {
                 dir('./terraform'){
                     sh 'terraform init'
+                    sh 'gcloud auth login'
                     sh 'terraform plan'
                     sh 'terraform apply'
                     sh 'terraform destroy'
