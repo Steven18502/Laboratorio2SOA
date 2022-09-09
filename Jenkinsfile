@@ -7,6 +7,7 @@ pipeline {
                 dir('./terraform'){
                     sh 'terraform init'
                     sh 'ls'
+                    sh 'gcloud auth activate-service-account --key-file=lab.json'
                 } 
             }
         }
