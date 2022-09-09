@@ -8,7 +8,6 @@ pipeline {
                 dir('./terraform'){
                     sh 'terraform init'
                     sh 'ls'
-                    //sh '$Env:GOOGLE_APPLICATION_CREDENTIALS="lab.json"'
                 }
             }
         }
