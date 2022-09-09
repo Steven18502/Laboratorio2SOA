@@ -4,11 +4,10 @@ pipeline {
     stages {
         stage("init") {
             steps {
- 
-                sh 'terraform init'
-                sh 'ls'
-
-                
+                dir('./terraform){
+                    sh 'terraform init'
+                    sh 'ls'
+                } 
             }
         }
         stage("build") {
