@@ -14,7 +14,7 @@ pipeline {
         }
         stage("build") {
             steps {
-                git branch: 'main', changelog: true url: 'https://github.com/Steven18502/Laboratorio2SOA.git'
+                echo "build"
             }
         }
         stage("test") {
