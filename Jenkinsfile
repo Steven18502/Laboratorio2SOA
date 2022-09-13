@@ -7,13 +7,14 @@ pipeline {
                 dir('./terraform'){
                     sh 'terraform init'
                     sh 'terraform plan'
+                    sh 'terraform apply -auto-approve'
                     sh 'terraform destroy -auto-approve'
                 } 
             }
         }
         stage("build") {
             steps {
-                echo "building"
+                git branch: 'main', changelog: true
             }
         }
         stage("test") {
