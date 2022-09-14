@@ -10,7 +10,7 @@ pipeline {
         stage("build") {
             steps {
                 dir('./cloud_function'){
-                    sh 'pylint main.py'
+                    sh 'pylint --exit-zero main.py'
                 } 
             }
         }
