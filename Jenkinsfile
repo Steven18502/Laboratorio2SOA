@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("init") {
             steps {
-                git branch: 'main', changelog: true, poll: true, url: 'https://github.com/Steven18502/Laboratorio2SOA.git'
+                git branch: 'dev', changelog: true, poll: true, url: 'https://github.com/Steven18502/Laboratorio2SOA.git'
                 dir('./terraform'){
                     sh 'terraform init'
                     sh 'terraform plan'
