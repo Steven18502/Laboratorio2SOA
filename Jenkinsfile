@@ -17,7 +17,7 @@ pipeline {
         stage("test") {
             steps {
                 dir('./cloud_function'){
-                    echo ''
+                    echo 'pytest -v'
                 } 
                
             }
